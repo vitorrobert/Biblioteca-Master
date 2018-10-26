@@ -14,22 +14,46 @@ $titulo = "Login";
 
      <title><?= $titulo ?></title>
    </head>
-   <body>
+   <body >
 <div align="center">
   <h4>Entre na Biblioteca Master
   </h4>
 </div>
      <form method="post" action="autenticar.php">
   <div class="form-group" >
-    <label for="user">Name</label>
-    <input type="text" class="form-control" id="user" name="user" placeholder="Name">
-  </div>
+      
+      <div class="container">
+<h1 class="form-heading"></h1>
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
 
+   <p>Por favor Insira seu Usuario e Senha</p>
+   </div>
+    <form id="Login">
+
+        <div class="form-group">
+
+
+            <input type="text" class="form-control" id="user" name="user" placeholder="Name">
+
+        </div>
+
+        <div class="form-group">
+
+                <input type="password" class="form-control" id="senha" name="senha" placeholder="Password">
+        </div>
+        
+        
+
+    
+  </div>
+        
    <form method="post" action="autenticar.php">
   <div class="form-group">
-    <label for="senha">Password</label>
-    <input type="password" class="form-control" id="senha" name="senha" placeholder="Password">
+
   </div>
+
 
   <?php
     if(isset($_GET["error"])) {
@@ -41,7 +65,9 @@ $titulo = "Login";
 
   <button type="submit" class="btn btn-primary">Login</button>
 </form>
-
+</div>
+</div>
+      </div>
 
 
 
