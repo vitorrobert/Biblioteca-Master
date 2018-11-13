@@ -15,46 +15,33 @@ $titulo = "Login";
      <title><?= $titulo ?></title>
    </head>
    <body >
-<div align="center">
-  <h4>Entre na Biblioteca Master
-  </h4>
-</div>
+
      <form method="post" action="autenticar.php">
-  <div class="form-group" >
+
+
+
+         <div class="form-group"  align="center"  >
+     
+      <div class="container" align="center">        
+<div class="row" >
+ <div class="col-sm">
       
-      <div class="container">
-<h1 class="form-heading"></h1>
-<div class="login-form">
-<div class="main-div">
-    <div class="panel">
-
-   <p>Por favor Insira seu Usuario e Senha</p>
-   </div>
-    <form id="Login">
-
-        <div class="form-group">
-
-
+    </div>
+    
+   
+        <div class="form-group" id="centro">
+            <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Entre na Biblioteca</h5>
             <input type="text" class="form-control" id="user" name="user" placeholder="Name">
 
-        </div>
+     
 
         <div class="form-group">
 
                 <input type="password" class="form-control" id="senha" name="senha" placeholder="Password">
         </div>
-        
-        
-
-    
-  </div>
-        
-   <form method="post" action="autenticar.php">
-  <div class="form-group">
-
-  </div>
-
-
+        <button type="submit" class="btn btn-primary">Login</button>
   <?php
     if(isset($_GET["error"])) {
       echo '<div class="alert alert-danger" role="alert">';
@@ -63,18 +50,53 @@ $titulo = "Login";
     }
    ?>
 
-  <button type="submit" class="btn btn-primary">Login</button>
+  
+    </div>
+    <div class="col-sm">
+    
+    </div>
+
+       </div>   
 </form>
+  </div>
+</div>
+   </div> 
+  </div>    </div>
+
+   
 </div>
 </div>
+
+
       </div>
 
 
-
-
-
-
-
+          <style type="text/css">
+             .form-control{
+                 width: 200px;
+             }
+             .alert alert-danger{
+                 width: 200px;
+             }
+             body{
+                 background-image: url("https://assets.simpleviewcms.com/simpleview/image/fetch/q_75/https://res.cloudinary.com/simpleview/image/upload/crm/parkcity/books_4859503D-C558-40BD-BF8E0023F8F2E057_e34e4e7e-ce74-4db0-b76c2d6bffa12303.jpg");
+             }
+           
+             .box{
+       width: 300px;
+         height: 300px;
+       
+     }
+  #centro {
+   
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-50px;
+    margin-left:-50px;
+}
+         </style>
+         
 
      <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
