@@ -20,37 +20,22 @@
    </head>
    <body>
 
-     <form method="post" action="livro_salvar.php">
+     <form method="post" action="usuario_salvar.php">
   <div class="form-group">
-    <label for="nome">Nome</label>
-    <input type="text" class="form-control" id='nome' name="nome"  placeholder="Digite o Nome do livro">
+    <label for="usuario">Usuario</label>
+    <input type="text" class="form-control" id='usuario' name="usuario"  placeholder="Digite o Usuario">
 
 
 </div>
          <div>
-<form method="post" action="livro_salvar.php">
+<form method="post" action="usuario_salvar.php">
 <div class="form-group">
-<label for="data">Publicacao</label>
-<input type="date" class="form-control" id='data' name="data"  placeholder="00/00/0000">
+<label for="data">Senha</label>
+<input type="password" class="form-control" id='senha' name="senha"  placeholder="Digite a senha">
 
-</div>
-  <div class="form-group" action="livro_salvar.php">
-    <label for="autor">Autor</label>
-    <input type="text" class="form-control" id='cpf' name="autor" placeholder="Digite o Autor">
-  </div>
-
-</div>
-         <div>
-  <div class="form-group" action="livro_salvar.php">
-    <label for="editora">Editora</label>
-    <input type="text" class="form-control" id='telefone' name="editora" placeholder="Digite a  Editora">
-  </div>
-
-</div>
-
-
-  <button type="submit" class="btn btn-primary">Enviar</button>
-    <a href="consultalivro.php" class="btn btn-danger">Cancelar</a>
+3
+  <button type="submit" class="btn btn-primary">Cadastrar Usuario</button>
+    <a href="consultaUsuario.php" class="btn btn-danger">Cancelar</a>
 
 
 </form>
@@ -65,4 +50,3 @@
  </html>
 
  </a>
-

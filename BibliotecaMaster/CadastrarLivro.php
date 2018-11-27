@@ -50,7 +50,7 @@
 
 
   <button type="submit" class="btn btn-primary">Enviar</button>
-    <a href="consultalivro.php" class="btn btn-danger">Cancelar</a>
+    <a href="consultaLivro.php" class="btn btn-danger">Cancelar</a>
 
 
 </form>
