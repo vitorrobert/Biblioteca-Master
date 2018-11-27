@@ -22,7 +22,7 @@ $logado =true;
       <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
-       <a class="navbar-brand" href="admin.php">Biblioteca Master</a>
+       <a class="navbar-brand" href="index.php">Biblioteca Master</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,6 +31,14 @@ $logado =true;
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="CadastrarLivro.php" >Cadastrar Livro</a>
+            <span class="sr-only">(página atual)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="CadastrarCliente.php" >Cadastrar Cliente</a>
+            <span class="sr-only">(página atual)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="CadastrarFuncionario.php" >Cadastrar Funcionario</a>
             <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item">

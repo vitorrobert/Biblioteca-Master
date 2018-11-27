@@ -49,7 +49,7 @@ and open the template in the editor.
                 <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
-        
+        <button type="submit" class="btn btn-success">Cadastrar Usuario</button>
   <?php
     if(isset($_GET["error"])) {
       echo '<div class="alert alert-danger" role="alert">';
