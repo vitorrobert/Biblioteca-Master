@@ -30,35 +30,46 @@ $logado =true;
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="CadastrarLivro.php" >Cadastrar Livro</a>
+        <a class="nav-link" href="CadastrarLivro.php" > Livro</a>
+            <span class="sr-only">(página atual)</span></a>
+    <li class="nav-item active">
+          <a class="nav-link" href="Reservas.php" >Lidos</a>
             <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="CadastrarCliente.php" >Cadastrar Cliente</a>
+          <a class="nav-link" href="Historico.php" >Historico</a>
             <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="CadastrarFuncionario.php" >Cadastrar Funcionario</a>
+        <a class="nav-link" href="CadastrarCliente.php" > Cliente</a>
             <span class="sr-only">(página atual)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="CadastrarFuncionario.php" > Funcionario</a>
+            <span class="sr-only">(página atual)</span></a>
+       </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="Lidos.php" >Lidos</a>
+            <span class="sr-only">(página atual)</span></a>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="emprestimo.php" >Emprestimo</a>
+            <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item dropdown">
-      
         </div>
       </li>
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <?php  echo "Bem Vindo ". $_SESSION["usuario_nome"]; ?>
-          <img src="https://st2.depositphotos.com/1007566/9432/v/950/depositphotos_94328280-stock-illustration-business-people-profile.jpg" class="img-responsive" height="20" width="20">
+           <?php  echo "Bem Vindo ". $_SESSION["usuario_nome"]; ?>
+         <img src="https://st2.depositphotos.com/1007566/9432/v/950/depositphotos_94328280-stock-illustration-business-people-profile.jpg" class="img-responsive" height="20" width="20">
+       </a>
+     <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="caixa">
+         <a class="dropdown-item" href="#">Ação</a>
+         <a class="dropdown-item" href="#">Outra ação</a>
+         <div class="dropdown-divider"></div>
+         <a class="dropdown-item" href="#">  <div align="center">
+        <a href="logout.php" class="btn btn-danger">Sair
         </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="caixa">
-          <a class="dropdown-item" href="#">Ação</a>
-          <a class="dropdown-item" href="#">Outra ação</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">  <div align="center">
-         <a href="logout.php" class="btn btn-danger">Sair
-         </a>
                   </div>
     </ul>
    
