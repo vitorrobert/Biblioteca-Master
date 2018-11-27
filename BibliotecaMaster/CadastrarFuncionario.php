@@ -17,7 +17,7 @@ $titulo = "Cadastro de Funcionario";
        <form method="post" action="funcionario_salvar.php">
   <div class="form-group">
     <label for="funcionario">Funcionário</label>
-    <input type="text" class="form-control" id='usuario' name="funcionario"  placeholder="Digiteo nome do funcionário">
+    <input type="text" class="form-control" id='funcionario' name="funcionario"  placeholder="Digiteo nome do funcionário">
     
 
 
