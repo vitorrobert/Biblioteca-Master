@@ -47,8 +47,8 @@ $registros = $consulta->fetchAll(PDO:: FETCH_OBJ);
   
       <td>
 
-        <a href="atualizarlivro.php?id=<?php echo $registro->cod_alu; ?>"class="btn btn-primay">Editar</a>
-        <a class="btn btn-danger" href="deletarlivro.php?id=<?php echo $registro->cod_alu;?>" target="_blank">Excluir</a>
+        <a href="atualizar_livro.php?id=<?php echo $registro->cod_alu; ?>"class="btn btn-primay">Editar</a>
+        <a class="btn btn-danger" href="deletar_livro.php?id=<?php echo $registro->cod_alu;?>" target="_blank">Excluir</a>
 
 
 

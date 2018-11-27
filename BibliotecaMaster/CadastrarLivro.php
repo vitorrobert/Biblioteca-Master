@@ -15,7 +15,7 @@ $titulo = "Cadastro de Livro";
    </head>
    <body>
 
-     <form method="post" action="livro_salvar.php">
+     <form method="post" action="salvar_livro.php">
   <div class="form-group">
     <label for="nome">Nome</label>
     <input type="text" class="form-control" id='nome' name="nome"  placeholder="Digite o Nome do livro">
@@ -23,20 +23,20 @@ $titulo = "Cadastro de Livro";
 
 </div>
          <div>
-<form method="post" action="livro_salvar.php">
+<form method="post" action="salvar_livro.php">
 <div class="form-group">
 <label for="data">Publicacao</label>
 <input type="date" class="form-control" id='data' name="data"  placeholder="00/00/0000">
 
 </div>
-  <div class="form-group" action="livro_salvar.php">
+  <div class="form-group" action="salvar_livro.php">
     <label for="autor">Autor</label>
     <input type="text" class="form-control" id='cpf' name="autor" placeholder="Digite o Autor">
   </div>
 
 </div>
          <div>
-  <div class="form-group" action="livro_salvar.php">
+  <div class="form-group" action="salvar_livro.php">
     <label for="editora">Editora</label>
     <input type="text" class="form-control" id='telefone' name="editora" placeholder="Digite a  Editora">
   </div>
@@ -45,7 +45,7 @@ $titulo = "Cadastro de Livro";
 
 
   <button type="submit" class="btn btn-primary">Enviar</button>
-    <a href="consultaLivro.php" class="btn btn-danger">Cancelar</a>
+    <a href="ConsultaLivro.php" class="btn btn-danger">Cancelar</a>
 
 
 </form>

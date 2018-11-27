@@ -6,8 +6,6 @@ $logado =true;
 
 }
 
-
-
  ?>
 <!DOCTYPE html>
 

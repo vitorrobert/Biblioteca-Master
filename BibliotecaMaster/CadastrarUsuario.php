@@ -14,7 +14,7 @@ $titulo = "Cadastro de Usuario";
    </head>
    <body>
 
-     <form method="post" action="usuario_salvar.php">
+       <form method="post" action="salvar_usuario.php">
   <div class="form-group">
     <label for="usuario">Usuario</label>
     <input type="text" class="form-control" id='usuario' name="usuario"  placeholder="Digite o Usuario">
@@ -22,14 +22,14 @@ $titulo = "Cadastro de Usuario";
 
 </div>
          <div>
-<form method="post" action="usuario_salvar.php">
+<form method="post" action="salvar_usuario.php">
 <div class="form-group">
-<label for="data">Senha</label>
-<input type="password" class="form-control" id='senha' name="senha"  placeholder="Digite a senha">
+<label for="senha">Senha</label>
+<input type="password" class="form-control" id='senha' name="senha"  placeholder="Digite a Senha">
 </div>
 
   <button type="submit" class="btn btn-primary">Cadastrar Usuario</button>
-    <a href="consultaUsuario.php" class="btn btn-danger">Cancelar</a>
+    <a href="ConsultaUsuario.php" class="btn btn-danger">Cancelar</a>
 
 
 </form>
