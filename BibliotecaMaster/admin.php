@@ -101,6 +101,8 @@ $logado =true;
           background-color: lightgoldenrodyellow;
         }
     </style>
+    <img src="https://lh3.googleusercontent.com/-JxSBt95Mj_M/W_2ZpwJd78I/AAAAAAAAHPY/Zpl-2agE1MYfxbvtUm6HDgezFWTlXFQ1wCJoC/w530-h298-n-rw/Apresenta%25C3%25A7%25C3%25A3o%2Bsem%2Bt%25C3%25ADtulo.png" width=1920 height=800>
+
 
 
    <!-- JavaScript (Opcional) -->
