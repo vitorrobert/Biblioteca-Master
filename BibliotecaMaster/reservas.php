@@ -32,12 +32,28 @@ and open the template in the editor.
   </div>   
      </form>   
                 <br />
-                <br />
-                <br /> 
+     <button type="button" class="btn btn-outline-primary">salvar</button>
+        <br /> 
+           <button type="button" class="btn btn-outline-primary">voltar</button>
+           <style type="text/css">
+       #caixa{
+         position:absolute;
+  
+   left:50%;
+  
+   margin-left:800px;    
+       }
+       #navbar{
+           background-color: lightsteelblue;
+       }
+       body{
+         background-color: lightgoldenrodyellow; 
+       }
+   </style>
         
         
         <?php
-        // put your code here
+   
         ?>
     </body>
 </html>
