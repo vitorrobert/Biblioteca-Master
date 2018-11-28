@@ -10,6 +10,10 @@ and open the template in the editor.
         <title> emprestimo </title>
     </head>
     <body>
+            <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+
         <h2> emprestimo <h2> 
                 <br />
                 <br />
@@ -33,6 +37,21 @@ and open the template in the editor.
      <button type="button" class="btn btn-outline-primary">salvar</button>
         <br /> 
            <button type="button" class="btn btn-outline-primary">voltar</button>
+           <style type="text/css">
+       #caixa{
+         position:absolute;
+  
+   left:50%;
+  
+   margin-left:800px;    
+       }
+       #navbar{
+           background-color: lightsteelblue;
+       }
+       body{
+         background-color: lightgoldenrodyellow; 
+       }
+   </style>
         <?php
         // put your code here
         ?>
