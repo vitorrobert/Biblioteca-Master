@@ -7,9 +7,14 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
+         <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <title> reservas </title>
     </head>
     <body>
+        <div class="container">
+  <!-- Content here -->
+
                 <h2> reservas <h2> 
                 <br />
                 <br />
@@ -32,7 +37,7 @@ and open the template in the editor.
                 <br />
                 <br /> 
         
-        
+       </div> 
         <?php
         // put your code here
         ?>
