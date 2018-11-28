@@ -30,7 +30,7 @@ $registros = $consulta->fetchAll(PDO::FETCH_OBJ);
    <tr>
     <thead class="table-dark">
    <th> Cod.</th>
-   <th> Nome</th>
+   <th> Usuario</th>
    <th> Senha</th>
    <th> Opções</th>
    </tr>
