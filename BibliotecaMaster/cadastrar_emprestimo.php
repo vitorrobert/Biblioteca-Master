@@ -1,59 +1,42 @@
+<?php
+$titulo = "cadastrar emprestimo";
+
+?>
+
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title> emprestimo </title>
-    </head>
-    <body>
-            <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <head>
+    <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-        <h2> emprestimo <h2> 
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />    
-        <form>
-  <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="codigo do livro">
+    <title><?= $titulo ?></title>
+  </head>
+  <body>
+
+<form method="post" action="recebe_empestimo.php">
+  <div class="form-group">
+    <label for="codigolivro">codigo do livro</label>
+    <input type="text" class="form-control" id="codigolivro"
+    name="codigolivro" placeholder="Digite o codigo do livro">
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="titulo do livro">
-    </div>
+  <div class="form-group">
+    <label for="titulolivro">titulo do livro</label>
+    <input type="text" class="form-control" id="titulolivro"
+    name="titulolivro" placeholder="titulo do livro">
   </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+  <a href="admin.php" class="btn btn-danger">Cancelar</a>
 </form>
-     <>
-     <br />
-     <br />
-     <br />
-     <button type="button" class="btn btn-outline-primary">salvar</button>
-        <br /> 
-           <button type="button" class="btn btn-outline-primary">voltar</button>
-           <style type="text/css">
-       #caixa{
-         position:absolute;
-  
-   left:50%;
-  
-   margin-left:800px;    
-       }
-       #navbar{
-           background-color: lightsteelblue;
-       }
-       body{
-         background-color: lightgoldenrodyellow; 
-       }
-   </style>
-        <?php
-        // put your code here
-        ?>
-    </body>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
 </html>

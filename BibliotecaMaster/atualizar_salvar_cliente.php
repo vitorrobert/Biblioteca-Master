@@ -8,15 +8,15 @@ if (isset($_SESSION['usuario_logado']) && $_SESSION['usuario_logado']) {
   $mensagem = "Você não está logado";
  header('Location:login.php?error=Você não está logado!');
 }
-$nome = $_POST['nome'];
-$idade = $_POST['idade'];
-$id = $_POST['idpessoa'];
+$codigolivro = $_POST['codigolivro'];
+$titulolivro  = $_POST['titulolivro '];
+$id = $_POST['idemprestimo'];
 include ('conexao.php');
-$sql = "UPDATE pessoa  SET nome = :nome, idade = :idade
-WHERE idpessoa=:id;";
+$sql = "UPDATE emprestimo  SET codigolivro = :codigolivro, titulolivro = :titulolivro
+WHERE idemprestimo=:id;";
 $atualizar = $con->prepare($sql);
-$atualizar->bindParam(':nome',$nome);
-$atualizar->bindParam(':idade',$idade);
+$atualizar->bindParam(':codigolivro',$codigolivro);
+$atualizar->bindParam(':titulolivro',$titulolivro);
 $atualizar->bindParam(':id',$id);
 $resultado = $atualizar->execute();
 if (! $resultado) {
@@ -24,5 +24,5 @@ if (! $resultado) {
   exit;
 }
 echo $atualizar->rowCount(). " linhas";
-header('Location:index_cliente.php');
+header('Location:index_emprestimo.php');
  ?>
