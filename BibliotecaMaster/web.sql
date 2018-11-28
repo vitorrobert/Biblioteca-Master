@@ -17,9 +17,9 @@ idade varchar (3)
 create table livro(
 idlivro int auto_increment primary key,
 nome varchar(100),
+data date,
 autor varchar(100),
 editora varchar(100),
-publicacao_liv date
 );
 
 create table usuario(
