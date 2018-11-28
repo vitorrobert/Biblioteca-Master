@@ -12,7 +12,7 @@ $nome = $_POST['nome'];
 $idade = $_POST['idade'];
 include ('conexao.php');
 /* criar codigo sql */
-$sql = "INSERT INTO pessoa (nome,idade)
+$sql = "INSERT INTO funcionario (nome,idade)
 values(:nome,:idade)";
 $inserir = $con->prepare($sql);
 $inserir->bindParam(':nome',$nome);
@@ -23,5 +23,5 @@ if (! $resultado) {
   exit;
 }
 echo $inserir->rowCount(). " linhas";
-header('Location:index_cliente.php');
+header('Location:index_funcionario.php');
  ?>

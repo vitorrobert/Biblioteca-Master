@@ -10,18 +10,19 @@ if (isset($_SESSION['usuario_logado']) && $_SESSION['usuario_logado']) {
 }
 $nome = $_POST['nome'];
 $idade = $_POST['idade'];
+$id = $_POST['idpessoa'];
 include ('conexao.php');
-/* criar codigo sql */
-$sql = "INSERT INTO pessoa (nome,idade)
-values(:nome,:idade)";
-$inserir = $con->prepare($sql);
-$inserir->bindParam(':nome',$nome);
-$inserir->bindParam(':idade',$idade);
-$resultado = $inserir->execute();
+$sql = "UPDATE pessoa  SET nome = :nome, idade = :idade
+WHERE idpessoa=:id;";
+$atualizar = $con->prepare($sql);
+$atualizar->bindParam(':nome',$nome);
+$atualizar->bindParam(':idade',$idade);
+$atualizar->bindParam(':id',$id);
+$resultado = $atualizar->execute();
 if (! $resultado) {
-  var_dump($inserir->errorInfo());
+  var_dump($atualizar->errorInfo());
   exit;
 }
-echo $inserir->rowCount(). " linhas";
+echo $atualizar->rowCount(). " linhas";
 header('Location:index_cliente.php');
  ?>

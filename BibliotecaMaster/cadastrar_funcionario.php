@@ -1,5 +1,5 @@
 <?php
-$titulo = "Cadastrar Cliente";
+$titulo = "cadastrar Funcionario";
 
 ?>
 
@@ -17,7 +17,7 @@ $titulo = "Cadastrar Cliente";
   </head>
   <body>
 
-<form method="post" action="recebe_cliente.php">
+<form method="post" action="recebe_funcionario.php">
   <div class="form-group">
     <label for="nome">Nome</label>
     <input type="text" class="form-control" id="nome"
@@ -29,6 +29,7 @@ $titulo = "Cadastrar Cliente";
     name="idade" placeholder="Idade">
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
+  <a href="admin.php" class="btn btn-danger">Cancelar</a>
 </form>
 
 <!-- Optional JavaScript -->

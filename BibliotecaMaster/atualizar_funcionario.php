@@ -1,10 +1,19 @@
 <?php
+session_start();
+if (isset($_SESSION['usuario_logado']) && $_SESSION['usuario_logado']) {
+  $logado=true;
+  $mensagem = "Você está logado";
+}else {
+  $logado=false;
+  $mensagem = "Você não está logado";
+ header('Location:login.php?error=Você não está logado!');
+}
 include 'conexao.php';
 if (empty($_GET['id'])) {
-  header('location:index_usuario.php');
+  header('location:index_funcionario.php');
 }else{
   $id = filter_var($_GET['id']);
-  $sql= "SELECT * FROM usuario WHERE idusuario=:id";
+  $sql= "SELECT * FROM funcionario WHERE idfuncionario=:id";
   $consulta = $con->prepare($sql);
   $consulta->bindParam(':id',$id);
   $consulta->execute();
@@ -27,18 +36,18 @@ if (empty($_GET['id'])) {
   </head>
   <body>
 
-<form method="post" action="atualizar_salvar_usuario.php">
+<form method="post" action="atualizar_salvar_funcionario.php">
   <div class="form-group">
-    <input type="hidden" name="idusuario" value="<?php echo $registro->idusuario;  ?>">
-    <label for="usuario">Usuario</label>
+    <input type="hidden" name="idfuncionario" value="<?php echo $registro->idfuncionario;  ?>">
+    <label for="nome">Nome</label>
     <input type="text" class="form-control" id="nome"
-    name="usuario" value="<?php echo $registro->usuario;  ?>">
+    name="nome" value="<?php echo $registro->nome;  ?>">
     </div>
 
   <div class="form-group">
-    <label for="senha">Senha</label>
-    <input type="text" class="form-control" id="senha"
-    name="senha" value="<?php echo $registro->senha;  ?>">
+    <label for="idade">idade</label>
+    <input type="number" class="form-control" id="idade"
+    name="idade" value="<?php echo $registro->idade;  ?>">
   </div>
   <button type="submit" class="btn btn-primary">Atualizar</button>
 <a href="admin.php" class="btn btn-danger">Cancelar</a>

@@ -1,15 +1,5 @@
 <?php
-include 'conexao.php';
-if (empty($_GET['id'])) {
-  header('location:index_usuario.php');
-}else{
-  $id = filter_var($_GET['id']);
-  $sql= "SELECT * FROM usuario WHERE idusuario=:id";
-  $consulta = $con->prepare($sql);
-  $consulta->bindParam(':id',$id);
-  $consulta->execute();
-  $registro = $consulta->fetch(PDO::FETCH_OBJ);
-}
+$titulo = "cadastrar Cliente";
 
 ?>
 
@@ -23,26 +13,23 @@ if (empty($_GET['id'])) {
    <!-- Bootstrap CSS -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Atualizar</title>
+    <title><?= $titulo ?></title>
   </head>
   <body>
 
-<form method="post" action="atualizar_salvar_usuario.php">
+<form method="post" action="recebe_cliente.php">
   <div class="form-group">
-    <input type="hidden" name="idusuario" value="<?php echo $registro->idusuario;  ?>">
-    <label for="usuario">Usuario</label>
+    <label for="nome">Nome</label>
     <input type="text" class="form-control" id="nome"
-    name="usuario" value="<?php echo $registro->usuario;  ?>">
+    name="nome" placeholder="Digite o nome">
     </div>
-
   <div class="form-group">
-    <label for="senha">Senha</label>
-    <input type="text" class="form-control" id="senha"
-    name="senha" value="<?php echo $registro->senha;  ?>">
+    <label for="idade">Idade</label>
+    <input type="text" class="form-control" id="idade"
+    name="idade" placeholder="Idade">
   </div>
-  <button type="submit" class="btn btn-primary">Atualizar</button>
-<a href="admin.php" class="btn btn-danger">Cancelar</a>
-
+  <button type="submit" class="btn btn-primary">Enviar</button>
+  <a href="admin.php" class="btn btn-danger">Cancelar</a>
 </form>
 
 <!-- Optional JavaScript -->
