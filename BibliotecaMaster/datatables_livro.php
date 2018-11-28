@@ -20,8 +20,8 @@ $registros = $consulta->fetchAll(PDO::FETCH_OBJ);
 
  <h1>Registros dos Livros</h1>
 
- <table class="table table-striped" id="example" style="width:100%">
-   <caption>Registros das Livros</caption>
+ <table class="table">
+   <caption align="center">Registros das Livros</caption>
    <tr>
     <thead class="table-dark">
    <th> Cod.</th>

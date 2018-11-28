@@ -34,10 +34,13 @@ $registros = $consulta->fetchAll(PDO::FETCH_OBJ);
 <p>
  <button href="#" class="btn btn-success" type="button" data-toggle="modal" data-target="#exampleModal"> Cad. New Livro</button>
 </p>
- <h1>Registros dos Livros</h1>
+<div class=" center">
+<h1>Registros dos Livros</h1>
+</div>
+
 
  <table class="table table-striped" id="example" style="width:100%">
-   <caption>Registros dos Livros</caption>
+ 
    <tr>
     <thead class="table-dark">
    <th> Cod.</th>
