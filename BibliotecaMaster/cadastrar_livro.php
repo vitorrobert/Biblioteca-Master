@@ -1,15 +1,5 @@
 <?php
-include 'conexao.php';
-if (empty($_GET['id'])) {
-  header('location:index_usuario.php');
-}else{
-  $id = filter_var($_GET['id']);
-  $sql= "SELECT * FROM usuario WHERE idusuario=:id";
-  $consulta = $con->prepare($sql);
-  $consulta->bindParam(':id',$id);
-  $consulta->execute();
-  $registro = $consulta->fetch(PDO::FETCH_OBJ);
-}
+$titulo = "cadastrar Livro";
 
 ?>
 
@@ -23,26 +13,36 @@ if (empty($_GET['id'])) {
    <!-- Bootstrap CSS -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Atualizar</title>
+    <title><?= $titulo ?></title>
   </head>
   <body>
 
-<form method="post" action="atualizar_salvar_usuario.php">
+<form method="post" action="recebe_livro.php">
   <div class="form-group">
-    <input type="hidden" name="idusuario" value="<?php echo $registro->idusuario;  ?>">
-    <label for="usuario">Usuario</label>
+    <label for="nome">Nome</label>
     <input type="text" class="form-control" id="nome"
-    name="usuario" value="<?php echo $registro->usuario;  ?>">
+    name="nome" placeholder="Digite o nome">
     </div>
-
-  <div class="form-group">
-    <label for="senha">Senha</label>
-    <input type="text" class="form-control" id="senha"
-    name="senha" value="<?php echo $registro->senha;  ?>">
   </div>
-  <button type="submit" class="btn btn-primary">Atualizar</button>
-<a href="admin.php" class="btn btn-danger">Cancelar</a>
-
+    <div>
+  <form method="post" action="salvar_livro.php">
+  <div class="form-group">
+  <label for="data">Publicação</label>
+  <input type="date" class="form-control" id='data' name="data"  placeholder="00/00/0000">
+  </div>
+    <div class="form-group" action="salvar_livro.php">
+      <label for="autor">Autor</label>
+      <input type="text" class="form-control" id='cpf' name="autor" placeholder="Digite o Autor">
+    </div>
+  </div>
+    <div>
+    <div class="form-group" action="salvar_livro.php">
+      <label for="editora">Editora</label>
+      <input type="text" class="form-control" id='telefone' name="editora" placeholder="Digite a  Editora">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+  <a href="admin.php" class="btn btn-danger">Cancelar</a>
 </form>
 
 <!-- Optional JavaScript -->

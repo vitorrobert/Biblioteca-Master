@@ -1,4 +1,5 @@
 <?php
+
 $id = $_GET['id'];
 include ('conexao.php');
 $sql = "DELETE FROM usuario WHERE idusuario=:id;";
@@ -10,4 +11,4 @@ if (! $resultado) {
   exit;
 }
 echo $deletar->rowCount(). " linhas";
-header('Location:index.php');
+header('Location:index_usuario.php');

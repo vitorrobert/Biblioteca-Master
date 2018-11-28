@@ -1,7 +1,17 @@
 <?php
+
+session_start();
+if (isset($_SESSION['usuario_logado']) && $_SESSION['usuario_logado']) {
+  $logado=true;
+  $mensagem = "Você está logado";
+}else {
+  $logado=false;
+  $mensagem = "Você não está logado";
+ header('Location:login.php?error=Você não está logado!');
+}
 $id = $_GET['id'];
 include ('conexao.php');
-$sql = "DELETE FROM cliente WHERE idcliente=:id;";
+$sql = "DELETE FROM pessoa WHERE idpessoa=:id;";
 $deletar = $con->prepare($sql);
 $deletar->bindParam(':id',$id);
 $resultado = $deletar->execute();
@@ -10,4 +20,4 @@ if (! $resultado) {
   exit;
 }
 echo $deletar->rowCount(). " linhas";
-header('Location:index.php');
+header('Location:index_cliente.php');

@@ -9,19 +9,23 @@ if (isset($_SESSION['usuario_logado']) && $_SESSION['usuario_logado']) {
  header('Location:login.php?error=Você não está logado!');
 }
 $nome = $_POST['nome'];
-$idade = $_POST['idade'];
+$data = $_POST['date'];
+$autor = $_POST['autor'];
+$editora = $_POST['editora'];
 include ('conexao.php');
 /* criar codigo sql */
-$sql = "INSERT INTO pessoa (nome,idade)
-values(:nome,:idade)";
+$sql = "INSERT INTO livro (nome,data,autor,editora)
+values(:nome,:data,:autor,:editora)";
 $inserir = $con->prepare($sql);
 $inserir->bindParam(':nome',$nome);
-$inserir->bindParam(':idade',$idade);
+$inserir->bindParam(':data',$data);
+$inserir->bindParam(':autor',$autor);
+$inserir->bindParam(':editora',$editora);
 $resultado = $inserir->execute();
 if (! $resultado) {
   var_dump($inserir->errorInfo());
   exit;
 }
 echo $inserir->rowCount(). " linhas";
-header('Location:index_cliente.php');
+header('Location:index_livro.php');
  ?>

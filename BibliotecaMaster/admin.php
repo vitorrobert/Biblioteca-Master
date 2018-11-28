@@ -20,7 +20,7 @@ $logado =true;
       <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
-       <a class="navbar-brand" href="index.php">Biblioteca Master</a>
+       <a class="navbar-brand" href="login.php">Biblioteca Master</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -28,10 +28,10 @@ $logado =true;
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="CadastrarLivro.php" > Livro</a>
+        <a class="nav-link" href="cadastrar_livro.php" > Livro</a>
             <span class="sr-only">(página atual)</span></a>
     <li class="nav-item active">
-          <a class="nav-link" href="Reservas.php" >Lidos</a>
+          <a class="nav-link" href="Reservas.php" >Reservas</a>
             <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item active">
@@ -39,11 +39,11 @@ $logado =true;
             <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="CadastrarCliente.php" > Cliente</a>
+        <a class="nav-link" href="cadastrar_cliente.php" > Cliente</a>
             <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="CadastrarFuncionario.php" > Funcionario</a>
+        <a class="nav-link" href="cadastrar_funcionario.php" > Funcionario</a>
             <span class="sr-only">(página atual)</span></a>
        </li>
       <li class="nav-item active">
@@ -51,7 +51,7 @@ $logado =true;
             <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item active">
-          <a class="nav-link" href="emprestimo.php" >Emprestimo</a>
+          <a class="nav-link" href="Emprestimo.php" >Emprestimo</a>
             <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item dropdown">
@@ -66,20 +66,20 @@ $logado =true;
          <a class="dropdown-item" href="#">Outra ação</a>
          <div class="dropdown-divider"></div>
          <a class="dropdown-item" href="#">  <div align="center">
-        <a href="logout.php" class="btn btn-danger">Sair
+        <a href="logout_usuario.php" class="btn btn-danger">Sair
         </a>
                   </div>
     </ul>
-   
+
   </div>
 </nav>
 <div class="container">
   <div class="row">
     <div class="col-sm">
- 
+
     </div>
     <div class="col-sm">
-      
+
     </div>
     <div class="col-sm">
 
@@ -89,16 +89,16 @@ $logado =true;
     <style type="text/css">
         #caixa{
           position:absolute;
-   
+
     left:50%;
-   
-    margin-left:800px;    
+
+    margin-left:800px;
         }
         #navbar{
             background-color: lightsteelblue;
         }
         body{
-          background-color: lightgoldenrodyellow; 
+          background-color: lightgoldenrodyellow;
         }
     </style>
 
