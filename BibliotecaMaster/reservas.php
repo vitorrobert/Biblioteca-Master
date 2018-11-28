@@ -12,8 +12,6 @@ and open the template in the editor.
         <title> reservas </title>
     </head>
     <body>
-        <div class="container">
-  <!-- Content here -->
 
                 <h2> reservas <h2> 
                 <br />
@@ -37,7 +35,7 @@ and open the template in the editor.
                 <br />
                 <br /> 
         
-       </div> 
+        
         <?php
         // put your code here
         ?>
